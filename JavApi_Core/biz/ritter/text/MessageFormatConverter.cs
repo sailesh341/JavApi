@@ -51,7 +51,7 @@ namespace biz.ritter.javapi
 					i++;
 					switch (chars[i]) {
 					case '%':
-						result.append ('%');
+                                result.append ('%');
 						break;
 					case 'n':
 						result.append ('\n');
@@ -61,6 +61,7 @@ namespace biz.ritter.javapi
 						break;
 					case '}':
 						result.append ("}}");
+                        goto default;
 					default:
 						// gültige Zeichen: -0123456789bBhHsScCdoxXeEfgGaAtT
 						// berücksichtigt:  -0123456789    s     xX
